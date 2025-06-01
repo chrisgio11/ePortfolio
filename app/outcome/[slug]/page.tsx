@@ -31,7 +31,7 @@ const learningOutcomes = {
       },
       {
         title: "Beyond-Class Artifact",
-        artifactUrl: "/artifacts/beyond-class-1.pdf",
+        artifactUrl: "/artifacts/placeholder.txt",
         reflection: "Placeholder."
       },
     ],
@@ -60,7 +60,7 @@ const learningOutcomes = {
       },
       {
         title: "Beyond-Class Artifact",
-        artifactUrl: "/artifacts/beyond-class-2.pdf",
+        artifactUrl: "/artifacts/placeholder.txt",
         reflection: "Placeholder."
       },
     ],
@@ -89,7 +89,7 @@ const learningOutcomes = {
       },
       {
         title: "Beyond-Class Artifact",
-        artifactUrl: "/artifacts/beyond-class-3.pdf",
+        artifactUrl: "/artifacts/placeholder.txt",
         reflection: "Placeholder."
       },
     ],
@@ -118,7 +118,7 @@ const learningOutcomes = {
       },
       {
         title: "Beyond-Class Artifact",
-        artifactUrl: "/artifacts/beyond-class-4.pdf",
+        artifactUrl: "/artifacts/placeholder.txt",
         reflection: "Placeholder."
       },
     ],
@@ -141,12 +141,12 @@ const learningOutcomes = {
     assignments: [
       {
         title: "In-Class Artifact",
-        artifactUrl: "/artifacts/in-class-artifact.pdf",
+        artifactUrl: "/artifacts/placeholder.txt",
         reflection: "Placeholder."
       },
       {
         title: "Beyond-Class Artifact",
-        artifactUrl: "/artifacts/beyond-class-5.pdf",
+        artifactUrl: "/artifacts/placeholder.txt",
         reflection: "Placeholder."
       },
     ],
@@ -169,12 +169,12 @@ const learningOutcomes = {
     assignments: [
       {
         title: "In-Class Artifact",
-        artifactUrl: "/artifacts/in-class-artifact.pdf",
+        artifactUrl: "/artifacts/placeholder.txt",
         reflection: "Placeholder."
       },
       {
         title: "Beyond-Class Artifact",
-        artifactUrl: "/artifacts/beyond-class-6.pdf",
+        artifactUrl: "/artifacts/placeholder.txt",
         reflection: "Placeholder."
       },
     ],
@@ -313,7 +313,7 @@ export default function OutcomePage() {
             <span className="text-lg font-semibold">ENC 1102 ePortfolio</span>
           </div>
           <p className="text-gray-400 mb-4">A digital showcase of academic growth and learning outcomes</p>
-          <p className="text-sm text-gray-500">Created as part of English Composition II coursework</p>
+          <p className="text-sm text-gray-500">Created as part of Professor Mainer's English Composition II course</p>
         </div>
       </footer>
     </div>

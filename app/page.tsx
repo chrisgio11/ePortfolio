@@ -214,17 +214,21 @@ export default function EPortfolio() {
             <CardContent className="p-8 md:p-12">
               <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
                 <div className="flex-shrink-0">
-                  <div className="w-32 h-32 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
-                    <User className="h-16 w-16 text-white" />
+                  <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-cyan-400 shadow-lg mx-auto md:mx-0">
+                    <img
+                      src="/me.png"
+                      alt="Christian Giovannetti"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl font-bold text-white mb-4">Christian Giovannetti</h3>
                   <p className="text-gray-300 leading-relaxed mb-6">
-                  Hi, I’m Christian, a Computer Science major with a Mathematics minor at the University of Central Florida. Throughout my time at UCF, I’ve worked as a Learning Assistant for Calculus I and as a Teaching Assistant for Object-Oriented Programming. These experiences have strengthened both my technical and communication skills, and I’m always looking for new ways to grow as a learner and educator.
+                  Hi, I'm Christian, a Computer Science major with a Mathematics minor at the University of Central Florida. Throughout my time at UCF, I've worked as a Learning Assistant for Calculus I and as a Teaching Assistant for Object-Oriented Programming. These experiences have strengthened both my technical and communication skills, and I'm always looking for new ways to grow as a learner and educator.
                   </p>
                   <p className="text-gray-300 leading-relaxed mb-6">
-                  My academic interests include artificial intelligence, machine learning, and software development. I’m particularly interested in how these fields can be used to solve real-world problems and improve people’s lives. I’m also passionate about using writing as a tool for communication, analysis, and personal growth. This ePortfolio represents my journey through the learning outcomes and showcases the skills I have developed throughout the semester.
+                  My academic interests include artificial intelligence, machine learning, and software development. I'm particularly interested in how these fields can be used to solve real-world problems and improve people's lives. I'm also passionate about using writing as a tool for communication, analysis, and personal growth. This ePortfolio represents my journey through the learning outcomes and showcases the skills I have developed throughout the semester.
                   </p>
                   <div className="flex flex-wrap justify-center md:justify-start gap-2">
                     <Badge className="bg-cyan-900/50 text-cyan-300 hover:bg-cyan-800/50 border-cyan-700">
@@ -252,7 +256,7 @@ export default function EPortfolio() {
             <span className="text-lg font-semibold">ENC 1102 ePortfolio</span>
           </div>
           <p className="text-gray-400 mb-4">A digital showcase of academic growth and learning outcomes</p>
-          <p className="text-sm text-gray-500">Created as part of English Composition II coursework</p>
+          <p className="text-sm text-gray-500">Created as part of Professor Mainer's English Composition II course</p>
         </div>
       </footer>
     </div>
