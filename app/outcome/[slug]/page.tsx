@@ -130,7 +130,7 @@ const learningOutcomes = {
       "Students will be able to draw conclusions based on analysis and interpretation of primary evidence and place that work in conversation with other source materials.",
     icon: <Zap className="h-8 w-8" />,
     detailedDescription:
-      "Placeholder.",
+      "This outcome is about being able to look at your own research and actually say something meaningful with it. For my paper, I had to collect data, figure out what it meant, and then connect it to what other researchers were saying. It taught me how to build on what’s already out there and add my own voice to the conversation.",
     skills: [
       "Analyzing primary evidence systematically",
       "Drawing well-supported conclusions from evidence",
@@ -140,9 +140,9 @@ const learningOutcomes = {
     ],
     assignments: [
       {
-        title: "In-Class Artifact",
-        artifactUrl: "/artifacts/placeholder.txt",
-        reflection: "Placeholder."
+        title: "Major Assignment 1",
+        artifactUrl: "/artifacts/MA1.pdf",
+        reflection: "In Major Assignment 1, I engaged with the “Contributing Knowledge” outcome by creating and refining research questions that aim to generate new insights into how course modality affects students’ ability to develop rhetorical awareness. I designed a survey to collect primary evidence from UCF students who took ENC 1101 or ENC 1102 in either online or face-to-face formats. My goal was to analyze how modality shapes students’ understanding of audience, purpose, and context, all of which are key components of rhetorical awareness. What makes this more than just a class project is that the findings could actually contribute to the broader discussion about how writing should be taught across different learning environments. Outside of academics, this experience made me more attentive to how different situations influence communication, which is something I now notice in daily interactions, group projects, and even social media posts."
       },
       {
         title: "Beyond-Class Artifact",
@@ -158,7 +158,7 @@ const learningOutcomes = {
       "Students will be able to negotiate differences in and act with intention on feedback from readers when drafting, revising, and editing their writing.",
     icon: <PenLine className="h-8 w-8" />,
     detailedDescription:
-      "Placeholder.",
+      "This outcome is all about learning how to take feedback and actually use it to make your writing better. I’ve learned that revision isn’t just about fixing grammar, it’s about making real changes to improve clarity, structure, and meaning. Whether it’s from a peer, a professor, or my own second look, I’ve gotten better at rethinking my work and making intentional edits that strengthen what I’m trying to say.",
     skills: [
       "Receiving feedback constructively",
       "Evaluating different types of reader responses",
@@ -168,9 +168,9 @@ const learningOutcomes = {
     ],
     assignments: [
       {
-        title: "In-Class Artifact",
-        artifactUrl: "/artifacts/placeholder.txt",
-        reflection: "Placeholder."
+        title: "Major Assignment 1",
+        artifactUrl: "/artifacts/MA1.pdf",
+        reflection: "Major Assignment 1 required me to engage deeply with revision, especially when it came to refining my research questions and methods. Early drafts of my research plan were too broad, and through feedback from my instructor and my own reflections, I narrowed the focus to something more manageable and specific. For example, I revised the number of survey participants and the types of questions used, balancing what I wanted to learn with what was realistic given the time constraints. This showed me that revision isn’t just about fixing grammar or rewording, it’s about making strategic decisions that improve clarity and purpose. I’ve started to apply this mindset outside the classroom too, especially when I’m editing resumes, coding, or explaining technical concepts to others. It's helped me see revision as a tool for better communication, not just better writing."
       },
       {
         title: "Beyond-Class Artifact",
