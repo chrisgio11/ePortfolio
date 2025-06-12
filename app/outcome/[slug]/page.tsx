@@ -30,9 +30,9 @@ const learningOutcomes = {
         reflection: "Before I took the NWWK quiz, I believed that writing was a fixed skill. What I mean is that one could either be good at it or not. However, after taking the quiz and reading the associated PDFs, I have arrived at a different conclusion. For example, I wrote there that “writing isn’t just a tool for communication, but also something that’s worth studying”. Realizing this helped me see that writing just to meet requirements isn’t all that writing has to offer. After this realization, I wondered about the consequences of seeing writing only as a basic skill, and why writing hasn’t traditionally been treated as a real field of study. This aligns with the generating inquiry outcome, which has a focus on exploring complex questions related to literacy and rhetoric."
       },
       {
-        title: "Beyond-Class Artifact",
-        artifactUrl: "/artifacts/placeholder.txt",
-        reflection: "Placeholder."
+        title: "Primary Source Analysis",
+        artifactUrl: "/artifacts/PrimarySourceAnalysis.png",
+        reflection: "In my U.S. History class, I explored lines of inquiry by analyzing political cartoons about immigration during the Gilded Age. I was curious about how media shaped public views on immigrants and what messages these cartoons were trying to communicate. My process involved closely examining both visuals and captions from sources like The Immigrant and Which Color, then connecting them to the themes we discussed in class, like nativism and exclusion laws. From this, I learned how powerful language and imagery can be in shaping public opinion, especially in political contexts. My main goal for the assignment was to better understand how historical sources reflect rhetorical strategies, and I think I accomplished that. This met my expectations of ENC 1102 by pushing me to think more critically about how arguments are made,not just in writing, but in visuals too. I know I’ll use this type of analysis in the future when evaluating sources or breaking down messages in both academic and real-world contexts."
       },
     ],
   },
@@ -59,9 +59,9 @@ const learningOutcomes = {
           "I believe my quiz answers have demonstrated the importance of utilizing multiple ways of writing. My answers acknowledged the fact that writing takes a bunch of different forms and that genres (such as blogs, menus, etc) are shaped by their rhetorical situations. I realized that each genre operates under its own conventions, expectations, and audience needs. This realization has helped me become more intentional in how I communicate overall, even outside of the classroom.",
       },
       {
-        title: "Beyond-Class Artifact",
-        artifactUrl: "/artifacts/placeholder.txt",
-        reflection: "Placeholder."
+        title: "Show Paper",
+        artifactUrl: "/artifacts/FinalShowPaper.pdf",
+        reflection: "In my Show Paper, I engaged with multimodality by blending written analysis with visual evidence, in this case, a selfie watching the show, to show my attendance and personal experience. Multimodality refers to combining different forms of communication (like visuals and text) to enhance meaning. I used different literacies, like visual literacy to interpret stage design and performance choices, and media literacy to analyze how the show used lighting and sound to impact the audience. Through this process, I learned how combining these elements can create a richer, more engaging review that goes beyond just words. This met my expectations for ENC 1102 by pushing me to think about how writing can extend into real-life experiences and media. I’ll carry this forward by continuing to incorporate different modes of expression, like images, structure, and tone, whenever I’m writing about live events, reviews, or multimedia content."
       },
     ],
   },
@@ -88,9 +88,9 @@ const learningOutcomes = {
           "The CRAAP Test assignment was a key part of how I practiced information literacy in this course. I evaluated four scholarly sources using criteria such as credibility, accuracy, relevance, and purpose. Instead of just picking sources that looked academic, I had to carefully justify why each one was reliable and appropriate for my research topic on course modality and rhetorical awareness. For example, I explained why an older article was still useful because of its foundational analysis of hybrid learning, and I pointed out strengths in newer studies like their use of up-to-date statistics or diverse data sources. This process helped me become more thoughtful about what makes a source trustworthy and useful in an academic setting, and I now have a clearer method for evaluating secondary research in future writing projects.",
       },
       {
-        title: "Beyond-Class Artifact",
-        artifactUrl: "/artifacts/placeholder.txt",
-        reflection: "Placeholder."
+        title: "Show Paper",
+        artifactUrl: "/artifacts/FinalShowPaper.pdf",
+        reflection: "For the Show Paper, I had to evaluate a primary source, the video of the performance, by paying close attention to its relevance to course themes and its effectiveness as a piece of theatre. I considered elements like the actors’ delivery, set design, and overall audience reaction to decide what was most credible and meaningful to include. While the performance served as a rich primary source, I also referenced secondary materials like lecture notes and course readings to give my analysis more context. It was definitely easier to evaluate patterns and meaning from the primary experience because I was directly immersed in it, but the secondary sources helped solidify my understanding. I learned how important it is to critically assess both direct experiences and supporting materials when making claims in writing. This process went beyond my expectations for ENC 1102, as it made me think more deeply about how to responsibly and ethically present observations. I can see myself applying this in the future when writing reviews, reports, or even professional analyses that require balancing personal insights with researched information."
       },
     ],
   },
@@ -117,9 +117,9 @@ const learningOutcomes = {
           "The CRAAP Test also helped me better understand the genre expectations of research-based assignments. Instead of just summarizing sources like in a traditional annotated bibliography, this task required me to write in a more evaluative and reflective way. I had to balance objective description with my own reasoning, which is something that matters in academic genres focused on research methods. I followed a structured format but also had to use my own voice to explain how and why these sources would support my larger project. In doing so, I learned how writing in research genres isn’t just about gathering information, it’s about making strategic choices about what to include, how to present it, and how it fits into the broader conversation. That’s exactly what this outcome is about: navigating the constraints and expectations of academic writing with intention.",
       },
       {
-        title: "Beyond-Class Artifact",
-        artifactUrl: "/artifacts/placeholder.txt",
-        reflection: "Placeholder."
+        title: "Primary Source Analysis",
+        artifactUrl: "/artifacts/PrimarySourceAnalysis.png",
+        reflection: "For my Primary Source Analysis in U.S. History, I had to work within the structure of an academic history paper. That meant using formal language, citing evidence clearly, and analyzing sources in a way that matched what’s expected in historical writing. I learned that history writing has its own genre rules, it’s not just about telling what happened, but also interpreting sources and explaining their context. I made choices about how to organize my ideas, what background to include, and how to explain the meaning behind each cartoon. This assignment definitely met my expectations for college-level writing, and it showed me that genre conventions vary a lot depending on the field. I know these genre awareness skills will help me adapt to different types of writing across my other classes and even in professional settings later on."
       },
     ],
   },
@@ -145,9 +145,9 @@ const learningOutcomes = {
         reflection: "In Major Assignment 1, I engaged with the “Contributing Knowledge” outcome by creating and refining research questions that aim to generate new insights into how course modality affects students’ ability to develop rhetorical awareness. I designed a survey to collect primary evidence from UCF students who took ENC 1101 or ENC 1102 in either online or face-to-face formats. My goal was to analyze how modality shapes students’ understanding of audience, purpose, and context, all of which are key components of rhetorical awareness. What makes this more than just a class project is that the findings could actually contribute to the broader discussion about how writing should be taught across different learning environments. Outside of academics, this experience made me more attentive to how different situations influence communication, which is something I now notice in daily interactions, group projects, and even social media posts."
       },
       {
-        title: "Beyond-Class Artifact",
-        artifactUrl: "/artifacts/placeholder.txt",
-        reflection: "Placeholder."
+        title: "Primary Source Analysis",
+        artifactUrl: "/artifacts/PrimarySourceAnalysis.png",
+        reflection: "In my US History class, I completed a Primary Source Analysis where I examined political cartoons like “The Immigrant: The Stranger at Our Gate” and “Which Color is to be Tabooed Next?” This assignment helped me practice drawing conclusions from primary sources by analyzing visual rhetoric and connecting it to historical context. I had to interpret not only the images but also the tone, symbolism, and message behind them, especially how they reflected attitudes about immigration during the Gilded Age. This pushed me to think critically about how visuals and text work together to make an argument, much like in ENC 1102. The process helped me better understand how to evaluate and engage with different types of sources, and I know this skill will help me in other research-based writing tasks in the future."
       },
     ],
   },
@@ -173,9 +173,9 @@ const learningOutcomes = {
         reflection: "Major Assignment 1 required me to engage deeply with revision, especially when it came to refining my research questions and methods. Early drafts of my research plan were too broad, and through feedback from my instructor and my own reflections, I narrowed the focus to something more manageable and specific. For example, I revised the number of survey participants and the types of questions used, balancing what I wanted to learn with what was realistic given the time constraints. This showed me that revision isn’t just about fixing grammar or rewording, it’s about making strategic decisions that improve clarity and purpose. I’ve started to apply this mindset outside the classroom too, especially when I’m editing resumes, coding, or explaining technical concepts to others. It's helped me see revision as a tool for better communication, not just better writing."
       },
       {
-        title: "Beyond-Class Artifact",
-        artifactUrl: "/artifacts/placeholder.txt",
-        reflection: "Placeholder."
+        title: "Show Paper",
+        artifactUrl: "/artifacts/FinalShowPaper.pdf",
+        reflection: "While working on the Show Paper, I negotiated differences by taking peer and instructor feedback seriously, especially when it came to organizing my thoughts more clearly and strengthening my analysis. Through revising, I learned that writing is not a one-and-done process, but something that improves dramatically through reflection and editing. Personally, I discovered that I tend to under-explain in my first drafts, so revising helped me slow down and better support my ideas with specific examples from the show. This experience exceeded my expectations for ENC 1102 by showing how thoughtful revision can elevate a piece from decent to strong. In the future, I’ll definitely apply these revision skills in academic papers, job applications, and any form of professional writing where clarity and effectiveness matter."
       },
     ],
   },
