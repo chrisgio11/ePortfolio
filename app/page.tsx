@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -60,15 +60,9 @@ const learningOutcomes = [
 
 export default function EPortfolio() {
   const [activeSection, setActiveSection] = useState("home")
-  const [isScrolling, setIsScrolling] = useState(false)
-  const homeRef = useRef<HTMLElement>(null)
-  const outcomesRef = useRef<HTMLElement>(null)
-  const assignmentsRef = useRef<HTMLElement>(null)
-  const aboutRef = useRef<HTMLElement>(null)
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId)
-    setIsScrolling(true)
     
     const element = document.getElementById(sectionId)
     if (element) {
@@ -80,49 +74,8 @@ export default function EPortfolio() {
         top: elementPosition,
         behavior: "smooth"
       })
-      
-      // Re-enable scroll detection after scroll animation completes
-      setTimeout(() => {
-        setIsScrolling(false)
-      }, 1000) // Adjust timing based on scroll duration
     }
   }
-
-  useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: '-20% 0px -20% 0px', // Trigger when section is 20% from top and bottom
-      threshold: 0
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      // Only update active section if not manually scrolling
-      if (isScrolling) return
-      
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const sectionId = entry.target.id
-          setActiveSection(sectionId)
-        }
-      })
-    }, observerOptions)
-
-    // Observe all sections
-    const sections = [homeRef.current, outcomesRef.current, assignmentsRef.current, aboutRef.current]
-    sections.forEach((section) => {
-      if (section) {
-        observer.observe(section)
-      }
-    })
-
-    return () => {
-      sections.forEach((section) => {
-        if (section) {
-          observer.unobserve(section)
-        }
-      })
-    }
-  }, [isScrolling])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-purple-900">
@@ -185,7 +138,7 @@ export default function EPortfolio() {
       </nav>
 
       {/* Hero Section */}
-      <section ref={homeRef} id="home" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="home" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -225,7 +178,7 @@ export default function EPortfolio() {
       </section>
 
       {/* Learning Outcomes Section */}
-      <section ref={outcomesRef} id="outcomes" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+      <section id="outcomes" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">ENC 1102 Learning Outcomes</h2>
@@ -269,7 +222,7 @@ export default function EPortfolio() {
       </section>
 
       {/* Major Assignments Section */}
-      <section ref={assignmentsRef} id="assignments" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="assignments" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Major Writing Assignments</h2>
@@ -288,18 +241,17 @@ export default function EPortfolio() {
                       <FileText className="h-6 w-6 text-cyan-400 group-hover:text-cyan-300" />
                     </div>
                     <Badge variant="outline" className="text-xs border-gray-600 text-gray-300">
-                      Research Paper
+                      Research Proposal
                     </Badge>
                   </div>
                   <CardTitle className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">Major Assignment 1</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col justify-between">
                   <CardDescription className="text-gray-300 leading-relaxed mb-4">
-                    Comprehensive research paper with multiple drafts showing the iterative writing process, 
-                    feedback integration, and final polished version.
+                  This research proposal outlines my plan to study how different course modalities, online versus face-to-face, affect students’ rhetorical awareness in writing. It establishes the foundation for the larger project developed in Major Assignment 2.
                   </CardDescription>
                   <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                    <span className="text-sm font-medium">Multiple drafts included</span>
+                    <span className="text-sm font-medium">View the proposal</span>
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </CardContent>
@@ -314,18 +266,17 @@ export default function EPortfolio() {
                       <FileText className="h-6 w-6 text-cyan-400 group-hover:text-cyan-300" />
                     </div>
                     <Badge variant="outline" className="text-xs border-gray-600 text-gray-300">
-                      Rhetorical Analysis
+                      Research Paper
                     </Badge>
                   </div>
                   <CardTitle className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">Major Assignment 2</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col justify-between">
                   <CardDescription className="text-gray-300 leading-relaxed mb-4">
-                    Multimodal analysis combining text and visual elements to examine rhetorical strategies 
-                    in contemporary political discourse.
+                  This paper analyzes how course modality affects rhetorical awareness. I developed it through multiple drafts and feedback, which helped shape a clearer, more effective final argument.
                   </CardDescription>
                   <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                    <span className="text-sm font-medium">Multimodal approach</span>
+                    <span className="text-sm font-medium">Multiple drafts included</span>
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </CardContent>
@@ -343,18 +294,18 @@ export default function EPortfolio() {
                       <FileText className="h-6 w-6 text-cyan-400 group-hover:text-cyan-300" />
                     </div>
                     <Badge variant="outline" className="text-xs border-gray-600 text-gray-300">
-                      Digital Portfolio
+                      ePortfolio
                     </Badge>
                   </div>
                   <CardTitle className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">Major Assignment 3</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col justify-between">
                   <CardDescription className="text-gray-300 leading-relaxed mb-4">
-                    This website itself serves as Major Assignment 3 - a comprehensive digital portfolio showcasing 
+                    This website itself serves as Major Assignment 3, a comprehensive digital portfolio showcasing 
                     my academic growth and learning outcomes throughout the semester.
                   </CardDescription>
                   <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                    <span className="text-sm font-medium">Digital portfolio</span>
+                    <span className="text-sm font-medium">View my portfolio</span>
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </CardContent>
@@ -365,7 +316,7 @@ export default function EPortfolio() {
       </section>
 
       {/* About Me Section */}
-      <section ref={aboutRef} id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>

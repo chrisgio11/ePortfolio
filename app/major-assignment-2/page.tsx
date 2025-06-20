@@ -7,93 +7,58 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { 
   BookOpen, 
-  ArrowLeft, 
   FileText, 
-  Edit3, 
-  CheckCircle, 
-  Calendar,
-  User,
-  Target,
-  Lightbulb,
-  MessageSquare,
-  Search,
-  Database,
-  Zap,
-  Eye,
-  Volume2
+  Download
 } from "lucide-react"
 import Link from "next/link"
 
 const assignmentData = {
-  title: "Rhetorical Analysis: Presidential Speech",
+  title: "Modality and Rhetorical Awareness",
   subtitle: "Major Assignment 2",
-  description: "A multimodal rhetorical analysis examining the persuasive strategies used in a contemporary presidential address, combining text analysis with visual and audio elements.",
+  description: "A comparative research project analyzing how online and face-to-face writing courses impact students’ development of rhetorical awareness, based on scholarly sources and original student survey data.",
   course: "ENC 1102",
-  date: "October 2024",
+  date: "June 2025",
   outcomes: ["Generating Inquiry", "Multiple ways of writing"],
   wordCount: "1,800 words",
   speechAnalyzed: "2024 State of the Union Address",
   multimodalElements: ["Text analysis", "Visual aids", "Audio clips", "Infographics"],
-  analysis: [
+  drafts: [
     {
-      name: "Ethos Analysis",
-      description: "Examination of speaker credibility and character",
-      findings: "Analysis of how the speaker establishes authority through personal background, policy achievements, and connection to American values. Examined use of personal anecdotes and references to historical precedents.",
-      examples: "References to personal family history, mentions of bipartisan achievements, appeals to American exceptionalism"
+      name: "Draft 1",
+      description: "Preliminary rhetorical analysis comparing rhetorical development in online and in-person learning environments",
+      date: "June 6, 2025",
+      link: "/artifacts/MA2.pdf",
+      feedback: "This first draft explores how course modality, online versus in-person, impacts students’ ability to develop rhetorical awareness in first-year writing. Drawing on survey data and scholarly sources, the draft outlines key themes such as peer feedback, instructor engagement, and reflective writing. This version laid the groundwork for later drafts, which added more specific evidence and analysis to strengthen the claims.",
+      improvements: "Enhanced analysis of speaker's background and historical context, improved integration of visual and audio elements, strengthened connections between different rhetorical strategies."
     },
     {
-      name: "Pathos Analysis", 
-      description: "Analysis of emotional appeals and audience connection",
-      findings: "Investigation of emotional strategies including patriotic appeals, concern for future generations, and calls for unity. Analyzed tone, word choice, and delivery techniques that evoke specific emotional responses.",
-      examples: "Stories of individual Americans, references to national challenges, calls for collective action"
+      name: "Feedback on Draft 1", 
+      description: "Feedback emphasized organizational clarity, MLA formatting, and more effective use of multimodal sources.",
+      date: "June 10, 2025",
+      link: "/artifacts/MA2feedback.pdf",
+      feedback: "The feedback on my first draft from Professor Mainer helped me recognize areas where my structure and organization needed improvement, especially in clearly separating sections like the introduction, methodology, and analysis. I also learned that proper MLA formatting, particularly in the works cited and image references, was essential for clarity and credibility. Additionally, I was reminded of the importance of thoroughly analyzing and connecting secondary sources to my main argument. Moving forward, I’ll focus on refining how I integrate sources and visuals to make my claims more persuasive and better supported."
     },
     {
-      name: "Logos Analysis",
-      description: "Examination of logical arguments and evidence",
-      findings: "Analysis of how the speaker uses statistics, policy proposals, and logical reasoning to support arguments. Examined structure of arguments and use of evidence to persuade audience.",
-      examples: "Economic statistics, policy comparisons, cause-and-effect reasoning, expert testimony"
+      name: "Final Draft",
+      description: "Comparative analysis of writing course modalities and their effects on rhetorical awareness",
+      date: "June 11, 2025",
+      link: "/artifacts/MA2final.pdf",
+      feedback: "This final paper explores how different course modalities, online vs. face-to-face, impact students’ development of rhetorical awareness. Drawing on original survey research from UCF first-year writing students, it analyzes how peer interaction, instructor feedback, and synchronous vs. asynchronous learning affect rhetorical growth. Feedback from the first draft guided the revision process, helping improve the integration of multimodal elements and deepening the rhetorical analysis. These changes strengthened the overall argument and led to a more cohesive, insightful final product.",
+      improvements: "Final polish on transitions, enhanced introduction with compelling hook, refined conclusion with broader implications for understanding political rhetoric, improved formatting and presentation of multimodal elements."
     }
   ],
-  reflection: "This assignment helped me understand how rhetoric works in real-world contexts beyond traditional academic writing. I enjoyed analyzing the visual and verbal elements together, which showed me how multimodal composition can enhance understanding and create more compelling arguments. The process of breaking down a complex speech into its rhetorical components taught me to think critically about how persuasion works across different modes of communication. I also learned how to effectively integrate multiple types of evidence and analysis into a cohesive argument.",
+  reflection: "This research project offered me the opportunity to explore how course delivery, online vs. face-to-face, impacts the development of rhetorical awareness in first-year writing students. I chose to investigate this topic because I noticed that many of my own writing experiences differed significantly depending on whether the class was in-person or online. I wanted to know if other students had similar experiences, and whether modality truly shapes how we learn rhetorical concepts like audience, purpose, and voice. \n\nTo answer this, I combined existing scholarship with original research. I read academic articles by Gray, Docktor and Borgman, and others, which helped frame my understanding of how instructional design affects rhetorical development. Then I gathered student perspectives through a structured survey and used thematic coding to analyze responses. That process taught me a lot about balancing qualitative research with personal insight. I learned how to identify patterns, translate them into themes, and support my conclusions using both data and established literature. \n\nThe most valuable insight I gained was that rhetorical awareness doesn't develop in a vacuum, it's highly influenced by the interaction structures in a course. Students in face-to-face classes repeatedly mentioned how real-time discussions and peer feedback helped sharpen their audience awareness. Online students, by contrast, often felt isolated, emphasizing the need for stronger instructor presence and better feedback systems. That finding was striking and echoed much of the existing research I reviewed. \n\nLooking back, this project exceeded my expectations for ENC 1102. I not only engaged deeply with scholarly work but also practiced meaningful primary research, which isn't something I expected to do in a composition class. Moving forward, I plan to carry these skills with me, especially the ability to think critically about how context and modality shape writing. Whether I'm in a future class, presenting at a conference, or working in a technical setting, understanding how to assess audience needs in different environments will be crucial.",
   keyLearning: [
     "How to analyze rhetorical strategies across multiple modes",
     "The importance of considering audience and context in analysis",
     "How to integrate visual and textual evidence effectively",
     "The value of multimodal composition in academic writing",
     "How to structure complex analysis with clear organization"
-  ],
-  artifacts: [
-    {
-      name: "Speech Transcript",
-      description: "Complete transcript of the analyzed presidential address",
-      type: "Primary Source"
-    },
-    {
-      name: "Rhetorical Analysis Paper",
-      description: "1,800-word analysis with multimodal elements",
-      type: "Analysis Document"
-    },
-    {
-      name: "Visual Aids",
-      description: "Infographics and charts supporting the analysis",
-      type: "Multimodal Elements"
-    },
-    {
-      name: "Audio Clips",
-      description: "Selected audio segments with analysis",
-      type: "Multimodal Elements"
-    }
-  ],
-  feedback: {
-    strengths: "Excellent analysis of ethos, pathos, and logos with good use of visual aids. Strong integration of multimodal elements that enhance rather than distract from the analysis. Good attention to context and audience considerations.",
-    improvements: "Could have incorporated more audience analysis and historical context. Consider how the speech fits into broader political discourse and historical patterns of presidential rhetoric.",
-    grade: "A-",
-    comments: "This is a sophisticated piece of rhetorical analysis that demonstrates strong critical thinking skills and effective use of multimodal composition."
-  }
+  ]
 }
 
 export default function MajorAssignment2() {
-  const [activeTab, setActiveTab] = useState("overview")
+  const [activeTab, setActiveTab] = useState("drafts")
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-purple-900">
@@ -106,12 +71,6 @@ export default function MajorAssignment2() {
               <span className="text-xl font-bold text-white">ENC 1102 ePortfolio</span>
             </div>
             <div className="flex space-x-4">
-              <Link href="/major-assignments">
-                <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800">
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  All Assignments
-                </Button>
-              </Link>
               <Link href="/">
                 <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800">
                   Home
@@ -136,48 +95,6 @@ export default function MajorAssignment2() {
               {assignmentData.description}
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-4 gap-6 mb-12">
-            <Card className="border-gray-700 bg-gray-800/80 backdrop-blur-sm">
-              <CardContent className="p-4 text-center">
-                <Calendar className="h-6 w-6 text-cyan-400 mx-auto mb-2" />
-                <p className="text-sm text-gray-400">Date</p>
-                <p className="text-white font-medium">{assignmentData.date}</p>
-              </CardContent>
-            </Card>
-            <Card className="border-gray-700 bg-gray-800/80 backdrop-blur-sm">
-              <CardContent className="p-4 text-center">
-                <FileText className="h-6 w-6 text-cyan-400 mx-auto mb-2" />
-                <p className="text-sm text-gray-400">Word Count</p>
-                <p className="text-white font-medium">{assignmentData.wordCount}</p>
-              </CardContent>
-            </Card>
-            <Card className="border-gray-700 bg-gray-800/80 backdrop-blur-sm">
-              <CardContent className="p-4 text-center">
-                <Volume2 className="h-6 w-6 text-cyan-400 mx-auto mb-2" />
-                <p className="text-sm text-gray-400">Speech Analyzed</p>
-                <p className="text-white font-medium text-sm">2024 State of the Union</p>
-              </CardContent>
-            </Card>
-            <Card className="border-gray-700 bg-gray-800/80 backdrop-blur-sm">
-              <CardContent className="p-4 text-center">
-                <Eye className="h-6 w-6 text-cyan-400 mx-auto mb-2" />
-                <p className="text-sm text-gray-400">Multimodal Elements</p>
-                <p className="text-white font-medium">4 Types</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="mb-8">
-            <h3 className="text-lg font-semibold text-white mb-3">Learning Outcomes Addressed:</h3>
-            <div className="flex flex-wrap gap-2">
-              {assignmentData.outcomes.map((outcome) => (
-                <Badge key={outcome} variant="secondary" className="bg-cyan-900/30 text-cyan-300 border-cyan-700">
-                  {outcome}
-                </Badge>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
@@ -185,155 +102,70 @@ export default function MajorAssignment2() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
         <div className="max-w-6xl mx-auto">
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid w-full grid-cols-4 bg-gray-700 mb-8">
-              <TabsTrigger value="overview" className="data-[state=active]:bg-cyan-600">Overview</TabsTrigger>
-              <TabsTrigger value="analysis" className="data-[state=active]:bg-cyan-600">Rhetorical Analysis</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-2 bg-gray-700 mb-8">
+              <TabsTrigger value="drafts" className="data-[state=active]:bg-cyan-600">Drafts and Feedback</TabsTrigger>
               <TabsTrigger value="reflection" className="data-[state=active]:bg-cyan-600">Reflection</TabsTrigger>
-              <TabsTrigger value="artifacts" className="data-[state=active]:bg-cyan-600">Artifacts</TabsTrigger>
             </TabsList>
 
-            <TabsContent value="overview" className="space-y-8">
-              <Card className="border-gray-700 bg-gray-800/80 backdrop-blur-sm">
-                <CardHeader>
-                  <CardTitle className="text-white">Assignment Overview</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Analysis Focus</h4>
-                    <p className="text-gray-300 leading-relaxed">
-                      This rhetorical analysis examined the 2024 State of the Union Address, analyzing how the speaker 
-                      used various persuasive strategies to connect with the audience and advance policy positions. 
-                      The analysis went beyond traditional text-based examination to incorporate visual and audio elements, 
-                      demonstrating how multimodal composition can enhance rhetorical analysis.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Multimodal Elements</h4>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      {assignmentData.multimodalElements.map((element, index) => (
-                        <div key={index} className="flex items-center space-x-3 p-3 bg-gray-700/50 rounded-lg">
-                          <div className="p-2 bg-cyan-900/30 rounded-lg">
-                            <FileText className="h-4 w-4 text-cyan-400" />
-                          </div>
-                          <span className="text-gray-300">{element}</span>
-                        </div>
-                      ))}
+            <TabsContent value="drafts" className="space-y-8">
+              {assignmentData.drafts.map((draft, index) => (
+                <Card key={index} className="border-gray-700 bg-gray-800/80 backdrop-blur-sm">
+                  <CardHeader>
+                    <div className="flex items-center justify-between">
+                      <CardTitle className="text-white text-2xl">{draft.name}</CardTitle>
+                      <Badge variant="outline" className="border-gray-600 text-gray-300">
+                        {draft.date}
+                      </Badge>
                     </div>
-                  </div>
-
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Questions Explored</h4>
-                    <ul className="text-gray-300 space-y-2">
-                      <li>• How does the speaker establish credibility and authority?</li>
-                      <li>• What emotional appeals are used to connect with the audience?</li>
-                      <li>• How are logical arguments structured and supported?</li>
-                      <li>• How do visual and audio elements enhance the rhetorical impact?</li>
-                      <li>• What role does context and audience play in the speech's effectiveness?</li>
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="analysis" className="space-y-8">
-              <div className="space-y-6">
-                {assignmentData.analysis.map((section, index) => (
-                  <Card key={index} className="border-gray-700 bg-gray-800/80 backdrop-blur-sm">
-                    <CardHeader>
-                      <CardTitle className="text-white">{section.name}</CardTitle>
-                      <CardDescription className="text-gray-300">
-                        {section.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div>
-                        <h5 className="text-sm font-medium text-cyan-400 mb-2">Key Findings</h5>
-                        <p className="text-gray-300 text-sm leading-relaxed">{section.findings}</p>
-                      </div>
-                      <div>
-                        <h5 className="text-sm font-medium text-green-400 mb-2">Examples Analyzed</h5>
-                        <p className="text-gray-300 text-sm leading-relaxed">{section.examples}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+                    <CardDescription className="text-gray-300 text-lg">
+                      {draft.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div>
+                      {/* <div className="flex items-center space-x-2 mb-3">
+                        <Download className="h-5 w-5 text-cyan-400" />
+                        <h4 className="text-lg font-semibold text-white">Download Document</h4>
+                      </div> */}
+                      <a 
+                        href={draft.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                      >
+                        <FileText className="h-4 w-4" />
+                        <span>View {draft.name}</span>
+                      </a>
+                    </div>
+                    
+                    <div>
+                      {/* <h4 className="text-lg font-semibold text-white mb-3">Feedback</h4> */}
+                      <p className="text-gray-300 leading-relaxed">
+                        {draft.feedback}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </TabsContent>
 
             <TabsContent value="reflection" className="space-y-8">
               <Card className="border-gray-700 bg-gray-800/80 backdrop-blur-sm">
                 <CardHeader>
-                  <CardTitle className="text-white flex items-center">
-                    <Lightbulb className="h-5 w-5 mr-2 text-cyan-400" />
-                    Personal Reflection
-                  </CardTitle>
+                  <CardTitle className="text-white">Reflection on the Writing Process</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 leading-relaxed mb-6">
-                    {assignmentData.reflection}
-                  </p>
-                  
-                  <h4 className="text-lg font-semibold text-white mb-3">Key Takeaways</h4>
-                  <ul className="text-gray-300 space-y-2">
-                    {assignmentData.keyLearning.map((learning, index) => (
-                      <li key={index} className="flex items-start">
-                        <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
-                        {learning}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="border-gray-700 bg-gray-800/80 backdrop-blur-sm">
-                <CardHeader>
-                  <CardTitle className="text-white flex items-center">
-                    <MessageSquare className="h-5 w-5 mr-2 text-green-400" />
-                    Instructor Feedback
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-6">
                   <div>
-                    <h5 className="text-sm font-medium text-green-400 mb-2">Strengths</h5>
-                    <p className="text-gray-300 text-sm leading-relaxed">{assignmentData.feedback.strengths}</p>
-                  </div>
-                  <div>
-                    <h5 className="text-sm font-medium text-yellow-400 mb-2">Areas for Improvement</h5>
-                    <p className="text-gray-300 text-sm leading-relaxed">{assignmentData.feedback.improvements}</p>
-                  </div>
-                  <div>
-                    <h5 className="text-sm font-medium text-cyan-400 mb-2">Overall Comments</h5>
-                    <p className="text-gray-300 text-sm leading-relaxed">{assignmentData.feedback.comments}</p>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-sm font-medium text-white">Grade:</span>
-                    <Badge variant="secondary" className="bg-green-900/30 text-green-300 border-green-700">
-                      {assignmentData.feedback.grade}
-                    </Badge>
+                    {assignmentData.reflection
+                      .split("\n\n")
+                      .map((para, i) => (
+                        <p key={i} className="text-gray-300 leading-relaxed text-lg mb-4">
+                          {para}
+                        </p>
+                      ))}
                   </div>
                 </CardContent>
               </Card>
-            </TabsContent>
-
-            <TabsContent value="artifacts" className="space-y-8">
-              <div className="grid md:grid-cols-2 gap-6">
-                {assignmentData.artifacts.map((artifact, index) => (
-                  <Card key={index} className="border-gray-700 bg-gray-800/80 backdrop-blur-sm">
-                    <CardHeader>
-                      <CardTitle className="text-white">{artifact.name}</CardTitle>
-                      <Badge variant="outline" className="w-fit border-gray-600 text-gray-300">
-                        {artifact.type}
-                      </Badge>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300 leading-relaxed">
-                        {artifact.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
             </TabsContent>
           </Tabs>
         </div>
@@ -346,7 +178,7 @@ export default function MajorAssignment2() {
             <BookOpen className="h-6 w-6 text-cyan-400" />
             <span className="text-lg font-semibold">ENC 1102 ePortfolio</span>
           </div>
-          <p className="text-gray-400 mb-4">Major Assignment 2 - Rhetorical Analysis</p>
+          <p className="text-gray-400 mb-4">A digital showcase of academic growth and learning outcomes</p>
           <p className="text-sm text-gray-500">Created as part of Professor Mainer's English Composition II course</p>
         </div>
       </footer>
