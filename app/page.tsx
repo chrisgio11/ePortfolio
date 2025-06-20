@@ -1,10 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { BookOpen, User, PenLine, FileSearch, Lightbulb, ArrowRight, Palette, FileType, Zap } from "lucide-react"
+import { BookOpen, User, PenLine, FileSearch, Lightbulb, ArrowRight, Palette, FileType, Zap, FileText } from "lucide-react"
 import Link from "next/link"
 
 const learningOutcomes = [
@@ -60,14 +60,69 @@ const learningOutcomes = [
 
 export default function EPortfolio() {
   const [activeSection, setActiveSection] = useState("home")
+  const [isScrolling, setIsScrolling] = useState(false)
+  const homeRef = useRef<HTMLElement>(null)
+  const outcomesRef = useRef<HTMLElement>(null)
+  const assignmentsRef = useRef<HTMLElement>(null)
+  const aboutRef = useRef<HTMLElement>(null)
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId)
+    setIsScrolling(true)
+    
     const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      // Calculate offset for sticky navigation (adjust 80px based on your nav height)
+      const navHeight = 80
+      const elementPosition = element.offsetTop - navHeight
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      })
+      
+      // Re-enable scroll detection after scroll animation completes
+      setTimeout(() => {
+        setIsScrolling(false)
+      }, 1000) // Adjust timing based on scroll duration
     }
   }
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -20% 0px', // Trigger when section is 20% from top and bottom
+      threshold: 0
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      // Only update active section if not manually scrolling
+      if (isScrolling) return
+      
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id
+          setActiveSection(sectionId)
+        }
+      })
+    }, observerOptions)
+
+    // Observe all sections
+    const sections = [homeRef.current, outcomesRef.current, assignmentsRef.current, aboutRef.current]
+    sections.forEach((section) => {
+      if (section) {
+        observer.observe(section)
+      }
+    })
+
+    return () => {
+      sections.forEach((section) => {
+        if (section) {
+          observer.unobserve(section)
+        }
+      })
+    }
+  }, [isScrolling])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-purple-900">
@@ -103,6 +158,17 @@ export default function EPortfolio() {
                 Learning Outcomes
               </Button>
               <Button
+                variant={activeSection === "assignments" ? "default" : "ghost"}
+                onClick={() => scrollToSection("assignments")}
+                className={
+                  activeSection === "assignments"
+                    ? "bg-cyan-600 hover:bg-cyan-700"
+                    : "text-gray-300 hover:text-white hover:bg-gray-800"
+                }
+              >
+                Major Assignments
+              </Button>
+              <Button
                 variant={activeSection === "about" ? "default" : "ghost"}
                 onClick={() => scrollToSection("about")}
                 className={
@@ -119,7 +185,7 @@ export default function EPortfolio() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section ref={homeRef} id="home" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -159,7 +225,7 @@ export default function EPortfolio() {
       </section>
 
       {/* Learning Outcomes Section */}
-      <section id="outcomes" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+      <section ref={outcomesRef} id="outcomes" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">ENC 1102 Learning Outcomes</h2>
@@ -202,8 +268,104 @@ export default function EPortfolio() {
         </div>
       </section>
 
+      {/* Major Assignments Section */}
+      <section ref={assignmentsRef} id="assignments" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Major Writing Assignments</h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              A comprehensive collection of my major writing assignments, including multiple drafts, feedback received, 
+              and reflections on the writing process and revisions made throughout the semester.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link href="/major-assignment-1">
+              <Card className="border border-gray-700 bg-gray-800/80 backdrop-blur-sm hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 cursor-pointer group h-full">
+                <CardHeader>
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="p-2 bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-lg group-hover:from-cyan-800/50 group-hover:to-purple-800/50 transition-colors">
+                      <FileText className="h-6 w-6 text-cyan-400 group-hover:text-cyan-300" />
+                    </div>
+                    <Badge variant="outline" className="text-xs border-gray-600 text-gray-300">
+                      Research Paper
+                    </Badge>
+                  </div>
+                  <CardTitle className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">Major Assignment 1</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col justify-between">
+                  <CardDescription className="text-gray-300 leading-relaxed mb-4">
+                    Comprehensive research paper with multiple drafts showing the iterative writing process, 
+                    feedback integration, and final polished version.
+                  </CardDescription>
+                  <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                    <span className="text-sm font-medium">Multiple drafts included</span>
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/major-assignment-2">
+              <Card className="border border-gray-700 bg-gray-800/80 backdrop-blur-sm hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 cursor-pointer group h-full">
+                <CardHeader>
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="p-2 bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-lg group-hover:from-cyan-800/50 group-hover:to-purple-800/50 transition-colors">
+                      <FileText className="h-6 w-6 text-cyan-400 group-hover:text-cyan-300" />
+                    </div>
+                    <Badge variant="outline" className="text-xs border-gray-600 text-gray-300">
+                      Rhetorical Analysis
+                    </Badge>
+                  </div>
+                  <CardTitle className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">Major Assignment 2</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col justify-between">
+                  <CardDescription className="text-gray-300 leading-relaxed mb-4">
+                    Multimodal analysis combining text and visual elements to examine rhetorical strategies 
+                    in contemporary political discourse.
+                  </CardDescription>
+                  <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                    <span className="text-sm font-medium">Multimodal approach</span>
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <div 
+              onClick={() => scrollToSection("home")}
+              className="cursor-pointer"
+            >
+              <Card className="border border-gray-700 bg-gray-800/80 backdrop-blur-sm hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 cursor-pointer group h-full">
+                <CardHeader>
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="p-2 bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-lg group-hover:from-cyan-800/50 group-hover:to-purple-800/50 transition-colors">
+                      <FileText className="h-6 w-6 text-cyan-400 group-hover:text-cyan-300" />
+                    </div>
+                    <Badge variant="outline" className="text-xs border-gray-600 text-gray-300">
+                      Digital Portfolio
+                    </Badge>
+                  </div>
+                  <CardTitle className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">Major Assignment 3</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col justify-between">
+                  <CardDescription className="text-gray-300 leading-relaxed mb-4">
+                    This website itself serves as Major Assignment 3 - a comprehensive digital portfolio showcasing 
+                    my academic growth and learning outcomes throughout the semester.
+                  </CardDescription>
+                  <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                    <span className="text-sm font-medium">Digital portfolio</span>
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Me Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section ref={aboutRef} id="about" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
